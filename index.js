@@ -19,4 +19,17 @@ app.launch(function(req, res) {
 
 });
 
+app.intent('airportinfo', {
+    'slots': {
+        'AIRPORTCODE': 'FAACODES'
+    },
+
+    'utterances': ['{|flight|airport} {|delay|status} {|info} {|for} {|AIRPORTCODE}']
+    },
+    function(req,res) {
+
+    }
+);
+
 module.exports = app;
+
