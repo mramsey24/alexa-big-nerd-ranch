@@ -11,9 +11,11 @@ var app = new Alexa.app('airportinfo');
 var FAADataHelper = require('./faa_data_helper');
 
 app.launch(function(req, res) {
+    //console.log('Hitting launch function');
     var prompt = 'For delay information, tell me an Airport code.';
-
-    res.say(prompt).reprompt(prompt).shoudEndSession(false);
+    //console.log(req);
+    res.say(prompt).reprompt(prompt).shouldEndSession(false);
+    //console.log(res)
 
 });
 
